@@ -10,6 +10,16 @@ class Uygulama extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Text('merhaba')); //material app
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("baslik"),
+          centerTitle: true,
+          backgroundColor:
+              Colors.purple,
+        ),
+        body: const Text('merhaba'),
+      ),
+    );
   }
 }
