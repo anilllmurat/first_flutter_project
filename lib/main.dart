@@ -16,7 +16,7 @@ class Uygulama extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("baslik"),
+          title: Text("Cem Yılmaz"),
           centerTitle: true,
           backgroundColor:
               const Color.fromARGB(
@@ -37,12 +37,8 @@ class Uygulama extends StatelessWidget {
             ),
           ),
         ),
-        body: const Text(
-          'merhaba',
-          style: TextStyle(
-            fontSize: 30,
-            fontWeight: FontWeight.w100,
-          ),
+        body: Image.asset(
+          "assets/images/cemyilmaz.jpeg",
         ),
       ),
     );
