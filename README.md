@@ -1,17 +1,22 @@
 # flutter_application_1
 
-flutter ogrenmeye basladim.
+D&D Adventurer's Companion
+A custom mobile application designed to enhance the Dungeons & Dragons experience for my gaming group. This project is my hands-on journey into Flutter development as a Computer Engineering student.
 
-## Getting Started
+🛠️ Key Features (In Development)
+Dice Roller: Fast and reliable dice rolling for all standard D&D dice (d4 to d100).
 
-This project is a starting point for a Flutter application.
+Note Taking: A dedicated space for players to keep track of NPCs, locations, and quest items.
 
-A few resources to get you started if this is your first Flutter project:
+Character Quick-Ref: Accessing essential character stats without flipping through papers.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+🚀 Technical Milestones
+UI/UX: Implementing a thematic design using custom fonts like Oswald.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Asset Management: Handling images and local data for a smooth user experience.
+
+Git Workflow: Managing feature updates and version control via GitHub.
+
+"Less time checking rules, more time roleplaying!" ⚔️
+
+
