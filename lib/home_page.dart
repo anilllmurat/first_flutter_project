@@ -20,47 +20,9 @@ class HomePage extends StatelessWidget {
         ),
         body: GridView.count(
           crossAxisCount: 2,
-          crossAxisSpacing: 2,
-          mainAxisSpacing: 2,
 
           children: [
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        const DiceScreen(),
-                  ),
-                );
-              },
-              child: Text(
-                "Dices",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-            ),
-
-            TextButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        const NoteScreen(),
-                  ),
-                );
-              },
-              child: Text(
-                "Notes",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-            ),
-
-            TextButton(
+            MaterialButton(
               onPressed: () {
                 Navigator.push(
                   context,
@@ -70,8 +32,48 @@ class HomePage extends StatelessWidget {
                   ),
                 );
               },
+              color: Colors.blue[700],
+
               child: Text(
                 "Spells",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
+
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const NoteScreen(),
+                  ),
+                );
+              },
+              color: Colors.amber,
+              child: Text(
+                "Notes",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
+
+            MaterialButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const DiceScreen(),
+                  ),
+                );
+              },
+              color: Colors.green[500],
+              child: Text(
+                "Dices",
                 style: TextStyle(
                   fontSize: 20,
                 ),
