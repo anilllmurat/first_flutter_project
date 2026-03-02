@@ -111,7 +111,7 @@ class _DiceResultState
                     height: 20,
                   ),
                   Text(
-                    "Gelen Zarlar: ${results.join(' - ')}",
+                    "Dice results: ${results.join(' - ')}",
                     style: const TextStyle(
                       fontSize: 25,
                       color:
@@ -132,7 +132,7 @@ class _DiceResultState
                           context,
                         ),
                     child: const Text(
-                      "Geri Dön",
+                      "back",
                     ),
                   ),
                 ],

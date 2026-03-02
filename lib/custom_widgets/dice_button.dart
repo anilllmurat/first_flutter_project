@@ -33,7 +33,7 @@ class _DiceButtonState
           builder: (context) {
             return AlertDialog(
               title: Text(
-                "Zar adedi giriniz:",
+                "Enter Number of Dice:",
               ),
               content: TextField(
                 controller: _controller,
@@ -50,7 +50,7 @@ class _DiceButtonState
                       _controller.text,
                     );
                   },
-                  child: Text("enter"),
+                  child: Text("Enter"),
                 ),
               ],
             );
