@@ -13,32 +13,32 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             "Adventurer's Backpack",
+            style: TextStyle(color: Colors.white),
           ),
-          backgroundColor:
-              Colors.amber[300],
+          backgroundColor: Colors.purple[900],
           centerTitle: true,
         ),
         body: GridView.count(
           crossAxisCount: 2,
+          childAspectRatio: 0.90,
+          mainAxisSpacing: 8,
+          crossAxisSpacing: 8,
+          padding: EdgeInsets.all(10),
 
           children: [
             MaterialButton(
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        const SpellScreen(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const SpellScreen()),
                 );
               },
-              color: Colors.blue[700],
+
+              color: Colors.red[400],
 
               child: Text(
                 "Spells",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
+                style: TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
 
@@ -46,18 +46,13 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        const NoteScreen(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const NoteScreen()),
                 );
               },
-              color: Colors.amber,
+              color: Colors.red[400],
               child: Text(
                 "Notes",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
+                style: TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
 
@@ -65,22 +60,18 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) =>
-                        const DiceScreen(),
-                  ),
+                  MaterialPageRoute(builder: (context) => const DiceScreen()),
                 );
               },
-              color: Colors.green[500],
+              color: Colors.red[400],
               child: Text(
                 "Dices",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
+                style: TextStyle(fontSize: 20, color: Colors.white),
               ),
             ),
           ],
         ),
+        backgroundColor: Colors.purple[900],
       ),
     );
   }
