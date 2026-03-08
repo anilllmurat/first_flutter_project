@@ -13,9 +13,12 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             "Adventurer's Backpack",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: MediaQuery.of(context).size.width * 0.06,
+            ),
           ),
-          backgroundColor: Colors.purple[900],
+          backgroundColor: Colors.yellow[400],
           centerTitle: true,
         ),
         body: GridView.count(
@@ -34,11 +37,14 @@ class HomePage extends StatelessWidget {
                 );
               },
 
-              color: Colors.red[400],
+              color: Colors.yellow[400],
 
               child: Text(
                 "Spells",
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.05,
+                  color: Colors.black,
+                ),
               ),
             ),
 
@@ -46,13 +52,16 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const NoteScreen()),
+                  MaterialPageRoute(builder: (context) => const NotesScreen()),
                 );
               },
-              color: Colors.red[400],
+              color: Colors.yellow[400],
               child: Text(
                 "Notes",
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.05,
+                  color: Colors.black,
+                ),
               ),
             ),
 
@@ -63,15 +72,18 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => const DiceScreen()),
                 );
               },
-              color: Colors.red[400],
+              color: Colors.yellow[400],
               child: Text(
                 "Dices",
-                style: TextStyle(fontSize: 20, color: Colors.white),
+                style: TextStyle(
+                  fontSize: MediaQuery.of(context).size.width * 0.05,
+                  color: Colors.black,
+                ),
               ),
             ),
           ],
         ),
-        backgroundColor: Colors.purple[900],
+        backgroundColor: Colors.white,
       ),
     );
   }

@@ -1,10 +1,18 @@
-//import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'splash_screen.dart';
-import 'screens/note_screen.dart';
+import 'package:flutter_application_1/splash_screen.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'models/note.dart';
 
-void main() {
-  runApp(Uygulama());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Hive.initFlutter();
+
+  Hive.registerAdapter(NoteAdapter());
+
+  await Hive.openBox<Note>('myNotesBox');
+
+  runApp(const Uygulama());
 }
 
 class Uygulama extends StatelessWidget {
@@ -12,9 +20,6 @@ class Uygulama extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      //home: Splash_screen(),
-      home: NoteScreen(),
-    );
+    return MaterialApp(home: SplashScreen());
   }
 }

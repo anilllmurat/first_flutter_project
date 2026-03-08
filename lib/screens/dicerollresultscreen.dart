@@ -11,23 +11,16 @@ List<int> diceing(int side, int count) {
   return diceList;
 }
 
-class DiceResult
-    extends StatefulWidget {
+class DiceResult extends StatefulWidget {
   final int count;
   final int side;
-  const DiceResult({
-    super.key,
-    required this.side,
-    required this.count,
-  });
+  const DiceResult({super.key, required this.side, required this.count});
 
   @override
-  State<DiceResult> createState() =>
-      _DiceResultState();
+  State<DiceResult> createState() => _DiceResultState();
 }
 
-class _DiceResultState
-    extends State<DiceResult> {
+class _DiceResultState extends State<DiceResult> {
   List<int> results = [];
   int total = 0;
   bool isRolling = true;
@@ -35,27 +28,21 @@ class _DiceResultState
   @override
   void initState() {
     super.initState();
-    results = diceing(
-      widget.side,
-      widget.count,
-    );
+    results = diceing(widget.side, widget.count);
     total = 0;
     for (int dice in results) {
       total += dice;
     }
 
-    Future.delayed(
-      const Duration(seconds: 3),
-      () {
-        if (!mounted) {
-          return;
-        }
+    Future.delayed(const Duration(seconds: 3), () {
+      if (!mounted) {
+        return;
+      }
 
-        setState(() {
-          isRolling = false;
-        });
-      },
-    );
+      setState(() {
+        isRolling = false;
+      });
+    });
   }
 
   @override
@@ -64,76 +51,37 @@ class _DiceResultState
       body: Center(
         child: isRolling
             ? Column(
-                mainAxisAlignment:
-                    MainAxisAlignment
-                        .center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Lottie.asset(
-                    'assets/animations/dice6.json',
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  Lottie.asset('assets/animations/dice6.json'),
+                  const SizedBox(height: 20),
                   const Text(
                     "Dice rolling!!",
-                    style: TextStyle(
-                      color:
-                          Color.fromARGB(
-                            255,
-                            255,
-                            163,
-                            7,
-                          ),
-                      fontSize: 30,
-                    ),
+                    style: TextStyle(color: Colors.red, fontSize: 30),
                   ),
                 ],
               )
             : Column(
                 // SONUÇLAR GÖRÜNECEK KISIM
-                mainAxisAlignment:
-                    MainAxisAlignment
-                        .center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     "total damage: $total",
-                    style:
-                        const TextStyle(
-                          fontSize: 40,
-                          fontWeight:
-                              FontWeight
-                                  .bold,
-                          color: Colors
-                              .amber,
-                        ),
+                    style: const TextStyle(
+                      fontSize: 40,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red,
+                    ),
                   ),
-                  const SizedBox(
-                    height: 20,
-                  ),
+                  const SizedBox(height: 20),
                   Text(
                     "Dice results: ${results.join(' - ')}",
-                    style: const TextStyle(
-                      fontSize: 25,
-                      color:
-                          Color.fromARGB(
-                            255,
-                            255,
-                            193,
-                            7,
-                          ),
-                    ),
+                    style: const TextStyle(fontSize: 25, color: Colors.red),
                   ),
-                  const SizedBox(
-                    height: 40,
-                  ),
+                  const SizedBox(height: 40),
                   ElevatedButton(
-                    onPressed: () =>
-                        Navigator.pop(
-                          context,
-                        ),
-                    child: const Text(
-                      "back",
-                    ),
+                    onPressed: () => Navigator.pop(context),
+                    child: const Text("back"),
                   ),
                 ],
               ),
